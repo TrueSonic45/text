@@ -1,0 +1,5 @@
+SELECT p.ProductID, p.Name, p.Color, p.ListPrice, ps.Name
+FROM Production.Product p
+JOIN Production.ProductSubcategory ps
+ON p.ProductSubcategoryID = ps.ProductSubcategoryID
+WHERE ps.Name LIKE '%frames%';
